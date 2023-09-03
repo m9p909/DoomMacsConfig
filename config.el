@@ -46,6 +46,11 @@
   (add-to-list 'org-capture-templates
                 '("s" "Scientific Method" entry (file+headline "sciences.org" "Questions")
                    "* Question:\n** Hypotheses\n*** <Your Hypothesis>\n**** Test Procedure\n***** Results\n**** Verified?")))
+(after! org
+  (add-to-list 'org-capture-templates
+                '("g" "Gluten RCA" entry (file+headline "gluten.org" "Gluten RCAs")
+                   "* %U  \n** Why do you think you were glutened?\n** What could have caused it?\n** What can be done to prevent it?")))
+
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
