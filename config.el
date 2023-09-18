@@ -50,6 +50,24 @@
   (add-to-list 'org-capture-templates
                 '("g" "Gluten RCA" entry (file+headline "gluten.org" "Gluten RCAs")
                    "* %U  \n** Why do you think you were glutened?\n** What could have caused it?\n** What can be done to prevent it?")))
+;; fennel
+(after! fennel-mode
+   (add-to-list 'auto-mode-alist '("\\.fnl\\'" . fennel-mode)))
+
+(map! :after fennel-mode
+      :map fennel-mode-map
+      :localleader "ee" #'lisp-eval-last-sexp
+      :localleader "er" #'lisp-eval-region
+      )
+
+
+(use-package! copilot
+  :hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
 
 
@@ -84,3 +102,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(after! fennel-mode
+  (add-to-list 'auto-mode-alist '("\\.fnl\\'" . fennel-mode)))

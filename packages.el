@@ -50,3 +50,6 @@
 ;(unpin! t)
 ;
 (package! kubernetes)
+(package! fennel-mode)
+(package! copilot
+  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
