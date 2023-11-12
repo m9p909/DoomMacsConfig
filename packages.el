@@ -52,4 +52,9 @@
 (package! kubernetes)
 (package! fennel-mode)
 ;(package! copilot
-;  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist")))
+;  :recipe (:host github :repo "zerolfx/copilot.el" :files ("*.el" "dist"))
+;  :disable t
+;  )
+(package! adoc-mode)
+(package! ox-gfm)
+(package! org-pomodoro)
